@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//Hackerrank RepeatedString
 public class RepeatedString {
 
     public static void main(String args[]) {
@@ -14,7 +15,7 @@ public class RepeatedString {
             System.out.println(total * d);
         }
         else {
-            int a_in_m = s.substring(0,(int) m).length() - s.substring(0, (int) m).replace("a","").length();
+            int a_in_m = s.substring(0,(int) m).length() - s.substring(0, (int) m).replace("a", "").length();
             System.out.println(total * d + (a_in_m));
         }
     }

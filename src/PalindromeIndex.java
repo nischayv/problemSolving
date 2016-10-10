@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 //Hackerrank PalindromeIndex
+//Can be optimized further
 public class PalindromeIndex {
 
     public static void main(String args[]) {
@@ -16,25 +17,16 @@ public class PalindromeIndex {
                     if(a.charAt(i) == a.charAt(j-1)) {
                         System.out.println(j);
                     }
-//                    else {
-//                        System.out.println(i);
-//                    }
-//                    flag = false;
-//                    break;
-                }
-            }
-//            if(flag) {
-//                System.out.println("-1");
-//            }
+                    else {
+                        System.out.println(i);
+                    }
+                    flag = false;
+                    break;
         }
     }
-
-    private static boolean isPalindrome(final char[] C, final int A, final int B){
-        for(int i = A, j = B-1; i < j; ++i, --j){
-            if (C[i] != C[j]){
-                return false;
+            if(flag) {
+                System.out.println("-1");
             }
         }
-        return true;
     }
 }
