@@ -1,3 +1,5 @@
+package Hash;
+
 /*
     For each of the buckets in this hashmap I am using a
     BST. The ideal solution that I can think of would be

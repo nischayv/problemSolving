@@ -1,3 +1,5 @@
+package ArraysAndLists;
+
 public class MaxDifference {
 
     public static void main(String args[]) {

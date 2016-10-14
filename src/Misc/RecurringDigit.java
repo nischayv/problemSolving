@@ -1,3 +1,5 @@
+package Misc;
+
 public class RecurringDigit {
 
     public static void main(String args[]) {

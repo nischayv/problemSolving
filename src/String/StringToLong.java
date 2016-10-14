@@ -1,3 +1,5 @@
+package String;
+
 public class StringToLong {
 
     public static void main(String args[]) {

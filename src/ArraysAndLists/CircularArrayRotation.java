@@ -1,3 +1,5 @@
+package ArraysAndLists;
+
 import java.util.Scanner;
 
 //Hackerrank Circular Array Rotation

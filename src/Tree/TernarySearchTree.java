@@ -1,3 +1,5 @@
+package Tree;
+
 public class TernarySearchTree {
 
     public static void main(String args[]){

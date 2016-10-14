@@ -1,3 +1,5 @@
+package ArraysAndLists;
+
 import java.util.Arrays;
 
 public class ZigZagArray {
