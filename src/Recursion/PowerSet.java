@@ -10,12 +10,12 @@ public class PowerSet {
 
     private static ArrayList<ArrayList<Integer>> powerset(ArrayList<Integer> set, int index) {
         ArrayList<ArrayList<Integer>> allsubsets;
-        if(set.size() == index) {
+        if(index == set.size()) {
             allsubsets = new ArrayList<ArrayList<Integer>>();
             allsubsets.add(new ArrayList<Integer>());
         }
         else {
-            allsubsets = powerset(set, index + 1);
+            allsubsets = powerset(set, index);
             int item = set.get(index);
             ArrayList<ArrayList<Integer>> moresubsets = new ArrayList<ArrayList<Integer>>();
             for(ArrayList<Integer> subset : allsubsets) {
