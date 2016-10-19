@@ -26,7 +26,6 @@ public class maxSubSum {
         int start = 0, end = 0;
 
         for(int i = 1; i < arr.length; i++){
-            //newsum = Math.max(newsum + arr[i], arr[i]);
             if(newsum + arr[i] > arr[i]) {
                 newsum += arr[i];
                 end = i;
