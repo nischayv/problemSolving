@@ -1,12 +1,9 @@
+package Misc;
+
 /**
- * Created by Nischay on 10/19/2016.
+ * Program to delete a node from a list
  */
-public class q3 {
-
-    public static void main(String args[]) {
-
-
-    }
+public class DeleteNode {
 
     public class LinkedListNode {
         int val;
