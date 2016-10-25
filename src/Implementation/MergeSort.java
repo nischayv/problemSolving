@@ -1,7 +1,7 @@
 package Implementation;
 
 /**
- * Created by Nischay on 10/24/2016.
+ * Implementation of MergeSort
  */
 public class MergeSort {
 }
