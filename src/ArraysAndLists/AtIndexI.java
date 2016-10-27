@@ -3,7 +3,7 @@ package ArraysAndLists;
 /**
  * Given an array with fixed length, check if each element is the same as the index
  * Tried a binary search type approach. May not be that effective since we have to iterate
- * through the entire array regardless. Unless we just want to know of there is any index that
+ * through the entire array regardless. Unless we just want to know if there is any index that
  * is incorrect and not the first incorrect.
  */
 public class AtIndexI {
