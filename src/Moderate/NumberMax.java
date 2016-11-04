@@ -16,14 +16,13 @@ public class NumberMax {
         int sc = sign(c);
 
         int use_sign_of_a = sa ^ sb;
-
         int user_sign_of_c = flip(use_sign_of_a);
-
         int k = use_sign_of_a * sa + user_sign_of_c * sc;
         int q = flip(k);
 
         return a*k + b*q;
     }
+
 
     /**
      * Flip 1 to 0 and 0 to 1
