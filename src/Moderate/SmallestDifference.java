@@ -3,7 +3,7 @@ package Moderate;
 import java.util.Arrays;
 
 /**
- * Given two arrays, calculate smallest pair (1 from each)
+ * Given two arrays, calculate smallest difference in pair (1 from each)
  */
 public class SmallestDifference {
 
