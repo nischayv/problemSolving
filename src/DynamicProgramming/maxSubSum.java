@@ -17,10 +17,26 @@ public class maxSubSum {
         for(int i = 0; i < n; i++) {
             arr[i] = s.nextInt();
         }
-        System.out.println("Max sum is: " + maxSum(arr));
+        System.out.println("Max sum is: " + maxSumWithIndex(arr));
     }
 
     private static int maxSum(int[] arr) {
+        int newsum = arr[0];
+        int max = arr[0];
+
+        for(int i = 1; i < arr.length; i++){
+            if(newsum + arr[i] > arr[i]) {
+                newsum += arr[i];
+            }
+            else {
+                newsum = arr[i];
+            }
+            max = Math.max(max, newsum);
+        }
+        return max;
+    }
+
+    private static int maxSumWithIndex(int[] arr) {
         int newsum = arr[0];
         int max = arr[0];
         int start = 0, end = 0;
