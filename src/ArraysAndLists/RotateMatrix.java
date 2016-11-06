@@ -17,7 +17,6 @@ public class RotateMatrix {
         for(int i = 0; i < arr.length; i++) {
             System.out.println(Arrays.toString(arr[i]));
         }
-
     }
 
     private static int[][] rotate(int[][] matrix) {
@@ -27,11 +26,12 @@ public class RotateMatrix {
         int n = matrix.length;
         for(int i = 0; i < n/2; i++) {
             int last = n - i - 1;
-            for(int j = i; j < last; j++) {
+            int first = i;
+            for(int j = first; j < last; j++) {
                 int offset = j - i;
-                int temp = matrix[i][j];
+                int temp = matrix[first][j];
                 // top <-- left
-                matrix[i][j] = matrix[last - offset][i];
+                matrix[first][j] = matrix[last - offset][first];
                 // left <-- bottom
                 matrix[last - offset][i] = matrix[last][last - offset];
                 // bottom <-- right
