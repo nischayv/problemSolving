@@ -1,4 +1,4 @@
-package Misc;
+package ArraysAndLists;
 
 /**
  * Program to delete a node from a list
