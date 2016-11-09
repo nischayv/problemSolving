@@ -1,7 +1,6 @@
 package Implementation;
 
 import java.util.LinkedList;
-import java.util.Queue;
 
 /**
  * Check is path exists between 2 nodes
@@ -13,13 +12,13 @@ public class BFS {
     }
 
     private static boolean findPath(Node node1, Node node2) {
-        Queue<Node> q = new LinkedList<>();
+        LinkedList<Node> q = new LinkedList<>();
         node1.visited = true;
         q.add(node1);
 
 
         while(!q.isEmpty()) {
-            Node temp = q.remove();
+            Node temp = q.removeFirst();
             if(temp == node2){
                 return true;
             }
