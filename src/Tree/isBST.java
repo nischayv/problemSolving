@@ -1,8 +1,5 @@
 package Tree;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  * Hackerrank is Binary Tree?
  */

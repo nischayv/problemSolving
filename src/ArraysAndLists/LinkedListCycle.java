@@ -27,11 +27,9 @@ public class LinkedListCycle {
                     fast = fast.next;
                     slow = slow.next;
                 }
-
                 return slow;
             }
         }
-
         return null;
     }
 }
