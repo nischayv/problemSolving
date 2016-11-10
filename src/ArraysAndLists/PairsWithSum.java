@@ -8,8 +8,8 @@ import java.util.HashMap;
 public class PairsWithSum {
 
     public static void main(String[] args) {
-        int arr[] = {2, 6, 3, 5, 1, 7};
-        pairs(arr, 8);
+        int arr[] = {2, 6, 3, 5, 1, 7, 4, 8};
+        pairs(arr, 9);
     }
 
     private static void pairs(int arr[], int sum) {
