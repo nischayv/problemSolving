@@ -19,7 +19,8 @@ public class KthToLast {
         Node t = new Node(2, null);
         Node n = new Node(1, t);
         t.next = new Node(3, new Node(4, null));
-        printKthToLast(n, 1);
+        printKthToLast(n, 3);
+        System.out.println(kthToLast(n, 3).data);
     }
 
     private static int printKthToLast(Node head, int k){
@@ -32,5 +33,26 @@ public class KthToLast {
             System.out.println("Kth to the last node is " + head.data);
         }
         return index;
+    }
+
+    private static Node kthToLast (Node start, int k) {
+        if (start == null) {
+            return null;
+        }
+
+        Node n1 = start;
+        Node n2 = start;
+
+        for (int i = 0; i < k; i++) {
+            if (n1 == null) return null;
+            n1 = n1.next;
+        }
+
+        while (n1 != null) {
+            n1 = n1.next;
+            n2= n2.next;
+        }
+
+        return n2;
     }
 }

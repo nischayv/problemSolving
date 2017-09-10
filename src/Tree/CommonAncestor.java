@@ -12,8 +12,8 @@ public class CommonAncestor {
 
     private static Node findAncestor(Node a, Node b) {
         int diff = depth(a) - depth(b);
-        Node shallowNode = diff > 0 ? b : a;
         Node deepNode = diff > 0 ? a : b;
+        Node shallowNode = diff > 0 ? b : a;
         deepNode = goUpBy(deepNode, Math.abs(diff));
 
         while(deepNode != shallowNode && deepNode != null && shallowNode != null) {
