@@ -35,7 +35,7 @@ public class CustomHashmap <V>{
         buckets = new Node[size];
     }
 
-    public boolean put(String key, V data){
+    public boolean set(String key, V data){
         if(key == null)
             return false;
 
@@ -182,14 +182,14 @@ public class CustomHashmap <V>{
         CustomHashmap map = new CustomHashmap<String>(10);
 
         //Testing for null
-        map.put(null, null);
+        map.set(null, null);
         System.out.println("Null value is: " + map.get(null));
 
-        map.put("KPCB", "Awesomeness!");
-        map.put("Test1", "Test1");
-        map.put("Test2", "Test2");
-        map.put("Test3", "Test3");
-        map.put("Test4", "Test4");
+        map.set("KPCB", "Awesomeness!");
+        map.set("Test1", "Test1");
+        map.set("Test2", "Test2");
+        map.set("Test3", "Test3");
+        map.set("Test4", "Test4");
 
         System.out.println("Test1: " + map.get("Test1"));
         System.out.println("Test2: " + map.get("Test2"));
