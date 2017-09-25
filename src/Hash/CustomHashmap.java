@@ -9,6 +9,7 @@ public class CustomHashmap <V>{
     // bitwise operations instead of modulo???
     // Look at java implementation
     // Convert from bst to avl trees
+    // size to be power of 2 always??????
 
     static class Node<V> {
         String key;
