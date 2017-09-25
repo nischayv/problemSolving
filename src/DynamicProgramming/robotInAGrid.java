@@ -9,7 +9,7 @@ public class robotInAGrid {
     }
 
     public static int findWays () {
-        return ways (0, 0, new int[][]{{1,1,1},{1,1,1},{1,1,1}}, new int[][]{{0,0,0},{0,0,0},{0,0,0}});
+        return waysIterative (new int[][]{{1,1,1},{1,0,1},{1,1,1}}, new int[][]{{0,0,0},{0,0,0},{0,0,0}});
     }
 
     public static int ways (int row, int col, int[][] a, int[][] b) {
@@ -27,5 +27,21 @@ public class robotInAGrid {
 
         b[row][col] = ways(row+1, col, a, b) + ways(row, col+1, a, b);
         return b[row][col];
+    }
+
+    public static int waysIterative (int[][] a, int[][] b) {
+
+        for(int i = a.length - 1; i >= 0; i--) {
+            for(int j = a[i].length - 1; j>=0; j--) {
+                if (a[i][j] != 0) {
+                    if (j == a[a.length - 1].length - 1 || i == a.length - 1) {
+                        b[i][j] = 1;
+                    } else {
+                        b[i][j] = b[i+1][j] + b[i][j+1];
+                    }
+                }
+            }
+        }
+        return b[0][0];
     }
 }
