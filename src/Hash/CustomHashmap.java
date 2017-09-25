@@ -8,6 +8,7 @@ public class CustomHashmap <V>{
     // Non synchronized??
     // bitwise operations instead of modulo???
     // Look at java implementation
+    // Convert from bst to avl trees
 
     static class Node<V> {
         String key;
