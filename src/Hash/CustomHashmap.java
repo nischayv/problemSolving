@@ -3,11 +3,11 @@ package Hash;
 public class CustomHashmap <V>{
 
     // Check if size >  max value
-    // Size is negative
     // Possibly store string as something else faster for comparison
-    // Allow null or don't allow??
+    // Allow null or don't allow?? Don't allow, how to deal with it // ig key is null or string length is 0, put at a[0]
     // Non synchronized??
     // bitwise operations instead of modulo???
+    // Look at java implementation
 
     static class Node<V> {
         String key;
@@ -29,6 +29,9 @@ public class CustomHashmap <V>{
 
     @SuppressWarnings("unchecked")
     public CustomHashmap(int size){
+        if (size < 1) {
+            throw new IllegalArgumentException("Size should be greater than 1");
+        }
         this.size = size;
         buckets = new Node[size];
     }
