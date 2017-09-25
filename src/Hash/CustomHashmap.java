@@ -1,15 +1,13 @@
 package Hash;
 
-/*
-    For each of the buckets in this hashmap I am using a
-    BST. The ideal solution that I can think of would be
-    to use a self balancing BST like AVL trees or red black
-    trees. This would decrease the worst case time
-    to O(log n) from O(n) for inserts, deletes and get.
-    Unfortunately due to time constraints I was not able to
-    implement the self balancing part, but the idea is very similar.
- */
 public class CustomHashmap <V>{
+
+    // Check if size >  max value
+    // Size is negative
+    // Possibly store string as something else faster for comparison
+    // Allow null or don't allow??
+    // Non synchronized??
+    // bitwise operations instead of modulo???
 
     static class Node<V> {
         String key;
