@@ -6,8 +6,8 @@ public class RotatedArray {
         int[] a = new int[]{15, 16, 19, 20, 25, 1, 3, 4, 5, 7, 10, 14};
         int[] b = new int[]{10, 15, 20, 5, 8};
         int[] c = new int[]{50, 5, 20, 30, 40};
-//        System.out.println(search(a, 5, 0, a.length-1));
-//        System.out.println(search(b, 5, 0, b.length-1));
+        System.out.println(search(a, 5, 0, a.length-1));
+        System.out.println(search(b, 5, 0, b.length-1));
         System.out.println(search(c, 5, 0, c.length-1));
     }
 
