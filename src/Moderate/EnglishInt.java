@@ -14,18 +14,18 @@ public class EnglishInt {
         if (num == 0) {
             return smalls[0];
         } else if (num < 0) {
-            return negative + " " + convert(-1 * num);
+            return negative + " " + convert(-1*num);
         }
 
-        LinkedList<String> parts = new LinkedList<String>();
+        LinkedList<String> parts = new LinkedList<>();
         int chunkCount = 0;
 
-        while (num > 0) {
+        while(num > 0) {
             if (num % 1000 != 0) {
                 String chunk = convertChunk(num % 1000) + " " + bigs[chunkCount];
                 parts.addFirst(chunk);
             }
-            num /= 1000; // shift chunk
+            num /= 1000;
             chunkCount++;
         }
 
