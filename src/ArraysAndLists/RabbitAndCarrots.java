@@ -10,9 +10,46 @@ public class RabbitAndCarrots {
                 {4,6,3,4,9},
                 {3,1,0,5,8}
         };
-        int middleRow = matrix.length/2;
-        int middleCol = matrix[0].length/2;
-        System.out.println(move(matrix, middleRow, middleCol));
+        System.out.println(calc(matrix));
+    }
+
+    private static int calc(int[][] matrix) {
+        int numOfRows = matrix.length;
+        int numOfCols = matrix[0].length;
+        int midRow = numOfRows/2;
+        int midCol = numOfCols/2;
+
+        if (matrix.length % 2 == 0 && matrix[0].length % 2 == 0) {
+            // Number of rows and number of columns are even
+            // Find max of middle 4 center positions in 2-D array
+            int max = findMax(matrix[midRow][midCol], matrix[midRow-1][midCol], matrix[midRow][midCol-1], matrix[midRow-1][midCol-1]);
+
+            if (max == matrix[midRow][midCol]) {
+                return move(matrix, midRow, midCol);
+            } else if (max == matrix[midRow-1][midCol]) {
+                return move(matrix, midRow-1, midCol);
+            } else if(max == matrix[midRow][midCol-1]) {
+                return move(matrix, midRow, midCol-1);
+            } else {
+                return move(matrix, midRow-1, midCol-1);
+            }
+        } else if (matrix.length % 2 == 0){
+            // Number of rows is even and cols is odd
+            if (matrix[midRow][midCol] > matrix[midRow-1][midCol]) {
+                return move(matrix, midRow, midCol);
+            } else {
+                return move(matrix, midRow-1, midCol);
+            }
+        } else if (matrix[0].length % 2 == 0){
+            // Number of rows is odd and cols are even
+            if (matrix[midRow][midCol] > matrix[midRow][midCol-1]) {
+                return move(matrix, midRow, midCol);
+            } else {
+                return move(matrix, midRow, midCol-1);
+            }
+        } else {
+            return move(matrix, midRow, midCol);
+        }
     }
 
 
@@ -30,8 +67,7 @@ public class RabbitAndCarrots {
         int move2 = isValidIndex(matrix, row+1, col) ? matrix[row+1][col] : 0;
         int move3 = isValidIndex(matrix, row, col-1) ? matrix[row][col-1] : 0;
         int move4 = isValidIndex(matrix, row, col+1) ? matrix[row][col+1] : 0;
-        System.out.println("move1: " + move1 + " move2: " + move2 + " move3: " + move3 + " move4: " + move4);
-        int max = Math.max(Math.max(move1, move2), Math.max(move3, move4));
+        int max = findMax(move1, move2, move3, move4);
 
         int val = matrix[row][col];
         matrix[row][col] = 0;
@@ -53,6 +89,11 @@ public class RabbitAndCarrots {
 
     private static boolean isTimeToSleep(int[][] matrix, int row, int col) {
         return !isValidIndex(matrix, row + 1, col) && !isValidIndex(matrix, row - 1, col) && !isValidIndex(matrix, row, col - 1) && !isValidIndex(matrix, row, col + 1);
+    }
+
+    // Finds max of 4 values
+    private static int findMax(int a, int b, int c, int d) {
+        return Math.max(Math.max(a,b), Math.max(c,d));
     }
 
 }
