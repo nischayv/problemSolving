@@ -6,7 +6,7 @@ public class Decode {
     private static Hashtable<String, HashSet<String>> ht = new Hashtable<>();
 
     public static void main(String[] args) {
-        System.out.println(find("11123"));
+        System.out.println(find("1123"));
     }
 
     public static HashSet<String> find(String s) {
